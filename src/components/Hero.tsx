@@ -14,8 +14,8 @@ const Hero = () => {
           <span className="brutal-tag">Berlin</span>
         </div>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          Junior iOS & Android Developer with a decade of experience in UX/UI design, 
-          graphic design, and digital media. I build apps that look good and work even better.
+          iOS & Android Developer with experience in UX/UI design and social media maketing. 
+          I build apps that look good and work even better.
         </p>
         <div className="flex gap-4 mt-10 animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <a 
