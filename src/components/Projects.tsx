@@ -1,33 +1,32 @@
 import ProjectCard from "./ProjectCard";
+import lunariMockup from "@/assets/lunari-mockup.jpg";
+import artAppMockup from "@/assets/art-app-mockup.jpg";
+import mindtrekMockup from "@/assets/mindtrek-mockup.jpg";
 
 const projects = [
   {
-    title: "FitTrack",
-    description: "A fitness tracking app with workout logging, progress visualization, and personalized recommendations. Built with clean architecture principles.",
-    techStack: ["SwiftUI", "Core Data", "HealthKit", "Charts"],
-    githubUrl: "https://github.com/valeriia-bilous",
-    platform: "iOS" as const,
-  },
-  {
-    title: "CityGuide",
-    description: "Location-based travel companion app with offline maps, local recommendations, and trip planning features using Google Maps API.",
-    techStack: ["Kotlin", "Jetpack Compose", "Room", "Google Maps API"],
+    title: "Lunari — Dream Interpreter",
+    description: "An AI-powered Android app for logging and interpreting dreams. Users can analyze, visualize, and explore their subconscious with personalized insights and rich imagery. Full CRUD functionality and cloud storage via Firebase.",
+    techStack: ["Android", "Kotlin", "Jetpack Compose", "MVVM", "Firebase", "OpenAI API", "Unsplash API", "Retrofit"],
     githubUrl: "https://github.com/valeriia-bilous",
     platform: "Android" as const,
+    image: lunariMockup,
   },
   {
-    title: "TaskFlow",
-    description: "Minimalist task management app with drag-and-drop organization, due date reminders, and cloud sync via Firebase.",
-    techStack: ["SwiftUI", "Firebase", "CloudKit", "Push Notifications"],
-    githubUrl: "https://github.com/valeriia-bilous",
-    platform: "iOS" as const,
-  },
-  {
-    title: "RecipeVault",
-    description: "Recipe discovery and meal planning app with search functionality, favorites, and shopping list generation from selected recipes.",
-    techStack: ["Kotlin", "Jetpack Compose", "Retrofit", "REST API"],
+    title: "Art App — The Met Gallery",
+    description: "A collaborative mobile app showcasing The Met's collection, allowing users to browse artworks, view details, and explore curated pieces. Built as a team project, emphasizing clean UI, responsive design, and real API integration.",
+    techStack: ["Android", "Kotlin", "Jetpack Compose", "MVVM", "REST API", "Team Collaboration", "Git"],
     githubUrl: "https://github.com/valeriia-bilous",
     platform: "Android" as const,
+    image: artAppMockup,
+  },
+  {
+    title: "MindTrek — Mindful Journaling",
+    description: "An iOS app for mindful journaling, helping users capture emotions, memories, and reflections. Features include emotion-based entries, calendar browsing, and map visualization of personal experiences.",
+    techStack: ["iOS", "SwiftUI", "Xcode", "MapKit", "CoreLocation", "MVVM", "Local Storage"],
+    githubUrl: "https://github.com/valeriia-bilous",
+    platform: "iOS" as const,
+    image: mindtrekMockup,
   },
 ];
 
@@ -42,7 +41,7 @@ const Projects = () => {
           clean architecture, API integration, and user-centered design.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
