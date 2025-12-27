@@ -1,30 +1,32 @@
-import { Palette, Layout, Globe, Video, Instagram } from "lucide-react";
+import squarespaceMockup from "@/assets/squarespace-mockup.jpg";
+import catalogueMockup from "@/assets/catalogue-mockup.jpg";
+import workbookMockup from "@/assets/workbook-mockup.jpg";
+import socialMediaMockup from "@/assets/social-media-mockup.jpg";
 
-const workAreas = [
+const digitalProjects = [
   {
-    icon: Layout,
-    title: "UX/UI Design",
-    description: "User research, wireframing, prototyping, and interface design for web and mobile applications.",
+    title: "Website & Social Media Content",
+    description: "Designed a multilingual Squarespace website and created social media content for a beauty studio, optimizing brand presentation and digital visibility. Focused on clarity, consistency, and user experience.",
+    techStack: ["Squarespace", "Web Design", "UX/UI", "Multilingual", "Content Creation", "Branding"],
+    image: squarespaceMockup,
   },
   {
-    icon: Palette,
-    title: "Graphic Design",
-    description: "Brand identity, print materials, marketing collateral, and visual communication.",
+    title: "Artist Catalogue & Brochure",
+    description: "Developed a printed catalogue and exhibition brochure for a contemporary artist. Emphasized clean layout, typography, and storytelling to showcase the artworks professionally.",
+    techStack: ["Graphic Design", "Layout", "Print Design", "Canva"],
+    image: catalogueMockup,
   },
   {
-    icon: Globe,
-    title: "Web Design",
-    description: "Squarespace websites for small businesses and creative professionals.",
+    title: "Workbooks & Video Editing",
+    description: "Created structured workbooks and edited online course videos for a coach. Delivered clear, visually consistent materials that improved user engagement and learning experience.",
+    techStack: ["Graphic Design", "Layout Design", "PDF Workbooks", "Video Editing", "Adobe Premiere Pro"],
+    image: workbookMockup,
   },
   {
-    icon: Instagram,
-    title: "Social Media & Content",
-    description: "Content strategy, visual content creation, and community management.",
-  },
-  {
-    icon: Video,
-    title: "Video Editing",
-    description: "Promotional videos, social media content, and motion graphics.",
+    title: "Social Media Content Creation",
+    description: "Produced branded visual content for social media — posts, stories, and Reels — ensuring cohesive and appealing digital presence for clients.",
+    techStack: ["Content Creation", "Graphic Design", "Reels/Shorts", "Brand Identity", "Instagram Marketing"],
+    image: socialMediaMockup,
   },
 ];
 
@@ -40,15 +42,34 @@ const DigitalWork = () => {
           development today.
         </p>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {workAreas.map((area) => (
+        <div className="grid sm:grid-cols-2 gap-6">
+          {digitalProjects.map((project) => (
             <div 
-              key={area.title} 
-              className="p-6 border border-border bg-background hover:border-foreground transition-colors"
+              key={project.title} 
+              className="group border-2 border-foreground bg-card overflow-hidden transition-all duration-200 hover:translate-x-[-2px] hover:translate-y-[-2px]"
+              style={{ boxShadow: 'var(--shadow-brutal)' }}
             >
-              <area.icon className="w-6 h-6 mb-4 text-primary" />
-              <h3 className="font-mono font-semibold mb-2">{area.title}</h3>
-              <p className="text-sm text-muted-foreground">{area.description}</p>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} mockup`}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+              </div>
+              
+              <div className="p-6">
+                <h3 className="font-mono font-semibold text-lg mb-3">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="brutal-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
