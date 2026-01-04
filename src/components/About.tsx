@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-20 bg-secondary/30">
       <div className="container">
         <div className="max-w-3xl">
           <p className="section-title">// About</p>
@@ -23,7 +23,7 @@ const About = () => {
               are made and how to implement them cleanly.
             </p>
             <p className="text-foreground font-medium">
-              I'm looking for a junior developer role where I can grow technically 
+              I'm looking for a developer role where I can grow technically 
               while bringing my design perspective to the team.
             </p>
           </div>

@@ -42,7 +42,7 @@ const SkillGroup = ({ title, skills }: { title: string; skills: string[] }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-secondary/30">
+    <section id="skills" className="py-20">
       <div className="container">
         <p className="section-title">// Skills</p>
         <h2 className="text-3xl md:text-4xl font-bold mb-12">What I Work With</h2>
