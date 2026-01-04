@@ -15,15 +15,6 @@ const Index = () => {
 
   useEffect(() => {
     document.title = "Portfolio";
-    const link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
-    if (link) {
-      link.href = "/favicon.ico";
-    } else {
-      const newLink = document.createElement("link");
-      newLink.rel = "icon";
-      newLink.href = "/favicon.ico";
-      document.head.appendChild(newLink)
-    }
   }, []);
 
   useEffect(() => {
