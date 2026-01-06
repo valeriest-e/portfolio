@@ -208,15 +208,6 @@ const CaseStudyTemplate = ({
               title={proto?.label ?? "Prototype"}
             />
           </div>
-
-          <a
-            href={proto?.url?.replace("embed/", "") ?? "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline text-sm mt-2"
-          >
-            Watch on YouTube
-          </a>
         </div>
       ))}
     </div>
